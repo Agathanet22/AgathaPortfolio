@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  
+  <title>Agatha Jeanetta — Business Analytics · Digital Business · Project Management</title>
+  <meta name="description" content="Portfolio of Agatha Jeanetta Arimbi Putri — Information Systems undergraduate at Universitas Brawijaya specializing in Business Analytics, Systems Development, and Digital Product Management. Google Student Ambassador 2026.">
+  
+  <!-- Open Graph / Meta Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Agatha Jeanetta — Business Analytics · Digital Business · Project Management">
+  <meta property="og:description" content="Bridging data intelligence, business systems, and digital product engineering. Google Student Ambassador 2026 & Gateway UB Vietnam Awardee.">
+  <meta property="og:image" content="assets/churnwatch.png">
+  
+  <!-- Google Fonts: Instrument Serif, Poppins, Inter, Fustat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* =========================================================
+       CSS DESIGN TOKENS (FACHRI AK EDITORIAL LUXURY)
+       ========================================================= */
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #5f5f5f;
+      --line: #ebebeb;
+      --line-dark: #262626;
+      --primary: #111111;
+      --primary-soft: #f4f4f5;
+      --on-primary: #ffffff;
+      --burgundy: #721727;
+      --burgundy-soft: #fcf4f5;
+      --surface: #ffffff;
+      --surface-2: #f8f8f9;
+      --glass: rgba(255, 255, 255, 0.92);
+      --glass-border: #ebebeb;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --radius-pill: 9999px;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.03);
+      --shadow: 0 4px 14px rgba(0,0,0,0.05);
+      --shadow-lg: 0 20px 40px -15px rgba(0,0,0,0.08);
+      
+      --font-serif: "Instrument Serif", Georgia, serif;
+      --font-body: "Inter", system-ui, -apple-system, sans-serif;
+      --font-pill: "Poppins", system-ui, sans-serif;
+      --font-sub: "Fustat", "Inter", sans-serif;
+      
+      --max: 1140px;
+      --gutter: 24px;
+      --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    section {
+      position: relative;
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      font-family: var(--font-sub);
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .h2 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(38px, 5.2vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+      margin-top: 14px;
+      max-width: 620px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .center .lead {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    svg.i {
+      width: 18px;
+      height: 18px;
+      flex: none;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: inline-block;
+      vertical-align: middle;
+      transition: transform 0.3s var(--ease);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      height: 48px;
+      padding: 0 24px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-pill);
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s var(--ease);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: #d1d5db;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn--primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .btn--primary:hover {
+      background: #27272a;
+      border-color: #27272a;
+    }
+
+    .btn--burgundy {
+      background: var(--burgundy);
+      color: #ffffff;
+      border-color: var(--burgundy);
+    }
+
+    .btn--burgundy:hover {
+      background: #54111d;
+      border-color: #54111d;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--font-pill);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      background: var(--primary-soft);
+      color: #4b5563;
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: all 0.2s;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =========================================================
+       1. FLOATING DYNAMIC ISLAND TOPNAV
+       ========================================================= */
+    .topnav {
+      position: fixed;
+      top: 18px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .topnav__in {
+      pointer-events: auto;
+      margin: 0 auto;
+      width: calc(100% - 48px);
+      max-width: 1040px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: max-width 0.6s var(--ease);
+    }
+
+    .topnav.compact .topnav__in {
+      max-width: 680px;
+    }
+
+    .brand {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      height: 48px;
+      padding: 0 16px 0 6px;
+      border-radius: var(--radius-pill);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      font-family: var(--font-pill);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.4s var(--ease);
+    }
+
+    .brand__mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--burgundy);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-style: italic;
+      font-weight: 400;
+      transition: transform 0.4s var(--ease);
+    }
+
+    .brand:hover .brand__mark {
+      transform: rotate(-10deg) scale(1.08);
+    }
+
+    .brand__name {
+      display: block;
+      max-width: 180px;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: max-width 0.5s var(--ease), opacity 0.3s;
+    }
+
+    .topnav.compact .brand__name {
+      max-width: 0;
+      opacity: 0;
+      padding: 0;
+    }
+
+    .nav-pill {
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .nav-pill ul {
+      display: flex;
+      gap: 2px;
+      list-style: none;
+    }
+
+    .nav-pill a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 40px;
+      padding: 0 14px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      transition: all 0.2s var(--ease);
+    }
+
+    .nav-pill a:hover {
+      color: var(--text);
+      background: var(--primary-soft);
+    }
+
+    .nav-pill a.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .sayhi {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 48px;
+      padding: 0 20px;
+      border-radius: var(--radius-pill);
+      background: var(--primary);
+      color: #ffffff;
+      border: 1px solid var(--primary);
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      box-shadow: var(--shadow);
+      transition: all 0.3s var(--ease);
+    }
+
+    .sayhi:hover {
+      background: var(--burgundy);
+      border-color: var(--burgundy);
+      transform: translateY(-1px);
+    }
+
+    .sayhi__hand {
+      display: inline-block;
+      font-size: 16px;
+      transform-origin: 70% 80%;
+      animation: handwave 2.5s ease-in-out infinite;
+    }
+
+    @keyframes handwave {
+      0%, 60%, 100% { transform: rotate(0); }
+      10% { transform: rotate(14deg); }
+      20% { transform: rotate(-8deg); }
+      30% { transform: rotate(14deg); }
+      40% { transform: rotate(-4deg); }
+      50% { transform: rotate(10deg); }
+    }
+
+    /* =========================================================
+       2. HERO SECTION — FACHRI ORBIT SYSTEM + PROMINENT NAME
+       ========================================================= */
+    .hero {
+      position: relative;
+      height: min(100vh, 920px);
+      min-height: 720px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      padding: 0;
+    }
+
+    /* Orbiting Project Cards Container */
+    .orbit__ring {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .orbit__card {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: var(--cs, 150px);
+      aspect-ratio: 16/10;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 14px 35px -10px rgba(0,0,0,0.22);
+      pointer-events: auto;
+      cursor: pointer;
+      will-change: transform, opacity;
+      transition: box-shadow 0.3s var(--ease);
+    }
+
+    .orbit__card:hover {
+      box-shadow: 0 20px 45px -8px rgba(114, 23, 39, 0.3);
+      z-index: 50 !important;
+    }
+
+    .orbit__card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s var(--ease);
+    }
+
+    .orbit__card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Edge Fades for Cinematic Depth */
+    .orbit__fade {
+      position: absolute;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .orbit__fade--l, .orbit__fade--r {
+      top: 0;
+      bottom: 0;
+      width: 18%;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    .orbit__fade--l {
+      left: 0;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
+    }
+
+    .orbit__fade--r {
+      right: 0;
+      background: linear-gradient(270deg, #ffffff 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
+    }
+
+    .orbit__fade--b {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 20%;
+      background: linear-gradient(0deg, #ffffff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    /* Central Content Stage */
+    .hero__copy {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 860px;
+      padding: 0 24px;
+      margin: auto 0;
+    }
+
+    .hero__status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      background: var(--burgundy-soft);
+      border: 1px solid rgba(114, 23, 39, 0.15);
+      color: var(--burgundy);
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* 100% UNBLOCKED, GLORIOUS NAME */
+    .hero__main-name {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(64px, 10.5vw, 116px);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--burgundy);
+      text-align: center;
+      margin: 12px 0 18px;
+      text-shadow: 0 1px 2px rgba(114, 23, 39, 0.04);
+    }
+
+    .hero__subhead {
+      font-family: var(--font-sub);
+      font-size: clamp(20px, 2.5vw, 25px);
+      font-weight: 500;
+      color: var(--text);
+      margin-top: 10px;
+    }
+
+    .hero__institution {
+      font-size: 16px;
+      color: var(--muted);
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+
+    /* Floating Stats Pills with Idle Floating Bob */
+    .hero__pills-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.3s var(--ease);
+      animation: float-bob 3.8s ease-in-out infinite alternate;
+    }
+
+    .stat-pill:nth-child(1) { animation-delay: 0s; }
+    .stat-pill:nth-child(2) { animation-delay: 0.8s; }
+    .stat-pill:nth-child(3) { animation-delay: 1.6s; }
+    .stat-pill:nth-child(4) { animation-delay: 2.4s; }
+
+    @keyframes float-bob {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-7px); }
+    }
+
+    .stat-pill:hover {
+      transform: translateY(-8px) scale(1.05);
+      border-color: var(--burgundy);
+      color: var(--burgundy);
+      box-shadow: 0 10px 25px rgba(114, 23, 39, 0.12);
+    }
+
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero__socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      font-family: var(--font-pill);
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    .hero__socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .hero__socials a:hover {
+      color: var(--burgundy);
+    }
+
+    /* =========================================================
+       3. ABOUT ME SECTION (FACHRI AK EDITORIAL 3-COLUMN)
+       ========================================================= */
+    #about {
+      padding: 96px 0;
+      background: #ffffff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1.15fr minmax(280px, 0.95fr) 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about__text .eyebrow,
+    .about__contact .eyebrow {
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+      text-transform: capitalize;
+    }
+
+    .about__title {
+      font-family: var(--font-serif);
+      font-size: clamp(38px, 4vw, 50px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+
+    .about__desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.75;
+      color: #52525b;
+      margin-bottom: 30px;
+    }
+
+    .about__cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .about__cta .btn--dark {
+      background: #18181b;
+      color: #ffffff;
+      border-radius: var(--radius-pill);
+      padding: 12px 24px;
+      font-family: var(--font-pill);
+      font-size: 13.5px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      transition: all 0.25s var(--ease);
+    }
+
+    .about__cta .btn--dark:hover {
+      background: var(--burgundy);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(114, 23, 39, 0.25);
+    }
+
+    .about__cta .btn--dark svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .about__cta .btn--link {
+      color: #18181b;
+      font-family: var(--font-pill);
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      padding: 8px 4px;
+    }
+
+    .about__cta .btn--link:hover {
+      color: var(--burgundy);
+      transform: translateX(2px);
+    }
+
+    .about__cta .btn--link svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* Column 2: Square Portrait Card */
+    .portrait-card {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #f4f4f5;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+      width: 100%;
+    }
+
+    .portrait-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .portrait-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .portrait-card figcaption {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .portrait-card figcaption span {
+      font-family: var(--font-pill);
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #18181b;
+      letter-spacing: -0.01em;
+    }
+
+    .portrait-card figcaption small {
+      font-family: var(--font-pill);
+      font-size: 12px;
+      font-weight: 400;
+      color: #71717a;
+    }
+
+    /* Column 3: Contact Pill List */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .contact-pill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      background: #ffffff;
+      border: 1px solid #e4e4e7;
+      color: #18181b;
+      font-family: var(--font-pill);
+      font-size: 13.5px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: all 0.25s var(--ease);
+    }
+
+    .contact-pill:hover {
+      border-color: #a1a1aa;
+      background: #fafafa;
+      transform: translateX(4px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      color: var(--burgundy);
+    }
+
+    .contact-pill__icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f4f4f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #18181b;
+      flex-shrink: 0;
+      transition: all 0.25s var(--ease);
+    }
+
+    .contact-pill:hover .contact-pill__icon {
+      background: var(--burgundy-soft);
+      color: var(--burgundy);
+    }
+
+    .contact-pill__icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    .contact-pill__text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* =========================================================
+       4. "THE THINGS" — 3D PHYSICAL FOLDERS (FACHRI AK ICONIC)
+       ========================================================= */
+    #projects {
+      background: var(--surface-2);
+    }
+
+    .folders {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 36px;
+      max-width: 960px;
+      margin: 48px auto 0;
+    }
+
+    .folder-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.35s var(--ease);
+      position: relative;
+    }
+
+    .folder-item:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: #d1d5db;
+    }
+
+    .folder {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 10/7;
+      margin-bottom: 20px;
+    }
+
+    .folder__back {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      fill: #e5e7eb;
+    }
+
+    .folder__photo {
+      position: absolute;
+      z-index: 2;
+      width: 34%;
+      aspect-ratio: 16/11;
+      left: var(--l);
+      top: var(--t);
+      border-radius: 6px;
+      background: #ffffff;
+      padding: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+      transform: translate(0, 0) rotate(var(--r));
+      transition: transform 0.55s cubic-bezier(0.34, 1.45, 0.5, 1);
+      transition-delay: var(--dl, 0s);
+      overflow: hidden;
+    }
+
+    .folder__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .folder__photo.p1 { --l: 8%; --t: 16%; --r: -12deg; --hx: -20%; --hy: -22%; --hr: -18deg; }
+    .folder__photo.p2 { --l: 26%; --t: -2%; --r: -4deg; --hx: -6%; --hy: -28%; --hr: -6deg; --dl: 0.04s; z-index: 3; }
+    .folder__photo.p3 { --l: 46%; --t: 0%; --r: 6deg; --hx: 6%; --hy: -25%; --hr: 8deg; --dl: 0.08s; z-index: 3; }
+    .folder__photo.p4 { --l: 64%; --t: 14%; --r: 14deg; --hx: 20%; --hy: -18%; --hr: 18deg; --dl: 0.12s; }
+
+    .folder-item:hover .folder__photo {
+      transform: translate(var(--hx), var(--hy)) rotate(var(--hr));
+    }
+
+    .folder__front {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      background: #f3f4f6;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70' preserveAspectRatio='none'%3E%3Cpath d='M0,16 Q0,14 2,14 L42,14 Q44,14 45.5,15.5 L50,20.5 Q51,22 53,22 L98,22 Q100,22 100,24 L100,68 Q100,70 98,70 L2,70 Q0,70 0,68 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 70' preserveAspectRatio='none'%3E%3Cpath d='M0,16 Q0,14 2,14 L42,14 Q44,14 45.5,15.5 L50,20.5 Q51,22 53,22 L98,22 Q100,22 100,24 L100,68 Q100,70 98,70 L2,70 Q0,70 0,68 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;
+      transform-origin: 50% 100%;
+      transition: transform 0.5s cubic-bezier(0.34, 1.3, 0.5, 1);
+    }
+
+    .folder__front svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #d1d5db;
+      stroke-width: 2.5;
+    }
+
+    .folder-item:hover .folder__front {
+      transform: perspective(800px) rotateX(-12deg);
+    }
+
+    .folder-item h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .folder-item p.desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      max-width: 340px;
+    }
+
+    .folder-item .folder-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin-top: 8px;
+    }
+
+    .folder-item .folder-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       5. "MY ARCHIVE CABINET" — TABBED FILE FOLDER
+       ========================================================= */
+    .cabinet {
+      max-width: 1000px;
+      margin: 48px auto 0;
+      --panel: #ffffff;
+    }
+
+    .cabinet__tabs {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: flex-end;
+      height: 60px;
+      padding: 0 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .cabinet__tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ctab {
+      position: relative;
+      flex: none;
+      height: 46px;
+      margin-right: 22px;
+      padding: 0 16px;
+      background: var(--tab-bg, #f4f4f5);
+      color: var(--muted);
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: height 0.3s var(--ease), color 0.2s, background-color 0.2s;
+    }
+
+    .ctab::before, .ctab::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 22px;
+      background: inherit;
+      -webkit-mask: var(--shoulder) 0 0/100% 100% no-repeat;
+      mask: var(--shoulder) 0 0/100% 100% no-repeat;
+    }
+
+    .ctab::before {
+      left: -21.5px;
+      --shoulder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 48' preserveAspectRatio='none'%3E%3Cpath d='M24 0H21C16 0 13.5 3 12 8L7.5 40C6.4 45 4 48 0 48H24Z'/%3E%3C/svg%3E");
+    }
+
+    .ctab::after {
+      right: -21.5px;
+      --shoulder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 48' preserveAspectRatio='none'%3E%3Cpath d='M0 0H3C8 0 10.5 3 12 8L16.5 40C17.6 45 20 48 24 48H0Z'/%3E%3C/svg%3E");
+    }
+
+    .ctab:hover {
+      height: 50px;
+      color: var(--text);
+    }
+
+    .ctab.is-active {
+      height: 54px;
+      background: var(--panel);
+      color: var(--burgundy);
+      font-weight: 600;
+      z-index: 10 !important;
+    }
+
+    .cabinet__body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      padding: 32px;
+      border-radius: 0 var(--radius) var(--radius) var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-width: 0;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .cpanel {
+      grid-area: 1/1;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.35s var(--ease), transform 0.4s var(--ease), visibility 0s linear 0.35s;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .cpanel.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: opacity 0.35s var(--ease) 0.05s, transform 0.4s var(--ease) 0.05s, visibility 0s;
+    }
+
+    .cpanel__top {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 32px;
+      align-items: start;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cpanel__title {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .cpanel__context {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .cpanel__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      min-width: 0;
+    }
+
+    .cpanel-card {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    }
+
+    .cpanel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .cpanel-card__media {
+      display: block;
+      overflow: hidden;
+      background: #f4f4f5;
+    }
+
+    .cpanel-card__media:hover .cpanel-card__img {
+      transform: scale(1.03);
+    }
+
+    .cpanel-card__img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-height: 225px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s var(--ease);
+    }
+
+    .cpanel-card__body {
+      padding: 16px;
+      background: #ffffff;
+    }
+
+    .cpanel-card__title {
+      font-family: var(--font-pill);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .cpanel-card__desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .cpanel-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-pill);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--burgundy);
+    }
+
+    /* Certificate Slider / Carousel */
+    .cpanel__top-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cert-nav-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      align-self: flex-start;
+      margin-top: 4px;
+    }
+
+    .cert-nav-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s var(--ease);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .cert-nav-btn:hover:not(:disabled) {
+      background: #18181b;
+      color: #ffffff;
+      border-color: #18181b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .cert-nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .cert-nav-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .cert-counter {
+      font-family: var(--font-pill);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      min-width: 48px;
+      text-align: center;
+    }
+
+    .cert-carousel-wrap {
+      position: relative;
+      margin-top: 20px;
+      width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .cert-carousel {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 6px 4px 20px 4px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      min-width: 0;
+      width: 100%;
+    }
+
+    .cert-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cert-carousel .cpanel-card {
+      flex: 0 0 calc(50% - 12px);
+      min-width: calc(50% - 12px);
+      scroll-snap-align: start;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .cert-carousel .cpanel-card {
+        flex: 0 0 calc(100% - 16px);
+        min-width: calc(100% - 16px);
+      }
+    }
+
+    /* =========================================================
+       6. "JOURNEY" — EXPERIENCE (DARK HALFTONE ANIMATED)
+       ========================================================= */
+    #journey {
+      background: #111111;
+      color: #ededed;
+      --text: #ededed;
+      --muted: #a3a3a3;
+      --line: #262626;
+      --primary-soft: #222222;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    #journey::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.28) 1.2px, transparent 1.8px);
+      background-size: 14px 14px;
+      -webkit-mask-image: radial-gradient(ellipse farthest-corner at 50% 50%, transparent 28%, rgba(0,0,0,0.4) 60%, #000 100%);
+      mask-image: radial-gradient(ellipse farthest-corner at 50% 50%, transparent 28%, rgba(0,0,0,0.4) 60%, #000 100%);
+      animation: journey-flow 20s linear infinite;
+    }
+
+    @keyframes journey-flow {
+      from { background-position: 0 0; }
+      to { background-position: 140px -140px; }
+    }
+
+    #journey .eyebrow { color: #a1a1aa; }
+    #journey .h2 { color: #ffffff; }
+    #journey .lead { color: #a1a1aa; }
+
+    .journey__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .exp-table {
+      list-style: none;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .exp-row {
+      display: grid;
+      grid-template-columns: 56px 1.2fr 1fr 1.3fr;
+      gap: 24px;
+      align-items: center;
+      padding: 24px 0;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+      transition: background-color 0.25s var(--ease);
+    }
+
+    .exp-row:last-child {
+      border-bottom: none;
+    }
+
+    .exp-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #1f1f1f;
+      border: 1px solid #333333;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-style: italic;
+      color: #ffffff;
+      flex: none;
+    }
+
+    .exp-co {
+      font-family: var(--font-sub);
+      font-size: 19px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .exp-date {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .exp-role {
+      font-size: 14px;
+      color: #d1d5db;
+      line-height: 1.5;
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .exp-tag {
+      font-family: var(--font-pill);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: #222222;
+      color: #d4d4d8;
+      border: 1px solid #333333;
+    }
+
+    /* =========================================================
+       7. "ACHIEVEMENTS BOARD" — STICKY POST-IT NOTES & PINS
+       ========================================================= */
+    #awards {
+      background: #fafafa;
+      background-image: repeating-linear-gradient(180deg, transparent 0 35px, #f0f0f0 35px 36px);
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+      max-width: 1040px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .note {
+      position: relative;
+      background: #ffffff;
+      padding: 24px 20px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.08);
+      border: 1px solid var(--line);
+      transform: rotate(var(--rot, 0deg));
+      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    }
+
+    .note:hover {
+      transform: translateY(-6px) rotate(0deg);
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.14);
+      z-index: 10;
+    }
+
+    .note:nth-child(1) { --rot: -1.5deg; }
+    .note:nth-child(2) { --rot: 1.8deg; }
+    .note:nth-child(3) { --rot: -1.2deg; }
+    .note:nth-child(4) { --rot: 2deg; }
+    .note:nth-child(5) { --rot: -2deg; }
+    .note:nth-child(6) { --rot: 1.5deg; }
+
+    .pin {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--burgundy);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.25), inset 0 2px 0 rgba(255,255,255,0.4);
+    }
+
+    .pin::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 16px;
+      width: 2px;
+      height: 6px;
+      margin-left: -1px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    .note__tag {
+      font-family: var(--font-pill);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--burgundy);
+      margin-bottom: 8px;
+    }
+
+    .note__title {
+      font-family: var(--font-serif);
+      font-size: 23px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .note__desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .note__desc mark {
+      background: rgba(114, 23, 39, 0.08);
+      color: var(--burgundy);
+      font-weight: 600;
+      padding: 0 4px;
+      border-radius: 3px;
+    }
+
+    .note__footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--line);
+      font-family: var(--font-pill);
+      font-size: 12px;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* =========================================================
+       8. SKILLS BENTO GRID
+       ========================================================= */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .skill-card {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s var(--ease);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: #d1d5db;
+    }
+
+    .skill-card__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .skill-card__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--burgundy-soft);
+      color: var(--burgundy);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+    }
+
+    .skill-card__title {
+      font-family: var(--font-pill);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .skill-card__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-pill {
+      font-family: var(--font-pill);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      color: #374151;
+      transition: all 0.2s;
+    }
+
+    .skill-pill:hover {
+      background: #ffffff;
+      border-color: var(--burgundy);
+      color: var(--burgundy);
+    }
+
+    /* =========================================================
+       9. RUNNING MARQUEE LOGOS
+       ========================================================= */
+    .marquee-section {
+      padding: 50px 0;
+      background: #ffffff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .marquee {
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+    }
+
+    .marquee__track {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      animation: marquee-scroll 32s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee__item {
+      font-family: var(--font-pill);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #9ca3af;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .marquee__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--burgundy);
+    }
+
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* =========================================================
+       10. CALL TO ACTION & FOOTER
+       ========================================================= */
+    #contact {
+      padding-bottom: 40px;
+    }
+
+    .cta-card {
+      border-radius: 24px;
+      padding: 80px 32px;
+      text-align: center;
+      background: #111111;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.18) 1.2px, transparent 1.8px);
+      background-size: 16px 16px;
+      -webkit-mask-image: radial-gradient(ellipse at center, transparent 30%, #000 90%);
+      mask-image: radial-gradient(ellipse at center, transparent 30%, #000 90%);
+    }
+
+    .cta-card .eyebrow { color: #a1a1aa; }
+    .cta-card .h2 { color: #ffffff; font-size: clamp(38px, 5.5vw, 62px); }
+    .cta-card p.copy { max-width: 640px; margin: 18px auto 36px; color: #d1d5db; font-size: 17px; }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      padding: 40px 0 32px;
+    }
+
+    .footer__grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 20px;
+      font-family: var(--font-pill);
+      font-size: 13px;
+    }
+
+    .footer__socials a:hover {
+      color: var(--burgundy);
+    }
+
+    /* =========================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================= */
+    @media (max-width: 1024px) {
+      .about__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .portrait-card {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+      .exp-row {
+        grid-template-columns: 52px 1fr 1fr;
+      }
+      .exp-tags {
+        grid-column: 2 / -1;
+      }
+      .board {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .topnav {
+        top: auto;
+        bottom: 16px;
+      }
+      .topnav__in {
+        width: calc(100% - 24px);
+        max-width: 480px !important;
+        justify-content: center;
+      }
+      .brand, .sayhi {
+        display: none;
+      }
+      .nav-pill a {
+        padding: 0 10px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 640px;
+      }
+      .hero__main-name {
+        font-size: clamp(40px, 10vw, 64px);
+      }
+      .hero__avatar-sticker {
+        width: 82px;
+        height: 82px;
+      }
+      .orbit__card {
+        width: 110px !important;
+      }
+
+      .folders {
+        grid-template-columns: 1fr;
+      }
+      .cpanel__top {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .cpanel__grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .board {
+        grid-template-columns: 1fr;
+      }
+      .about__grid {
+        grid-template-columns: 1fr;
+      }
+      .about__details {
+        grid-template-columns: 1fr;
+      }
+      .exp-row {
+        grid-template-columns: 44px 1fr;
+        gap: 12px;
+      }
+      .exp-role, .exp-tags {
+        grid-column: 2;
+      }
+      footer {
+        padding-bottom: 90px;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- =========================================================
+       1. FLOATING DYNAMIC ISLAND TOPNAV
+       ========================================================= -->
+  <header class="topnav" id="topnav">
+    <div class="topnav__in">
+      <a href="#top" class="brand" aria-label="Agatha Jeanetta">
+        <span class="brand__mark">AJ</span>
+        <span class="brand__name">Agatha Jeanetta</span>
+      </a>
+
+      <nav class="nav-pill" id="navLinks">
+        <ul>
+          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">The Things</a></li>
+          <li><a href="#gallery">Archive</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#awards">Honors</a></li>
+        </ul>
+      </nav>
+
+      <a href="mailto:agathajeanetta@gmail.com" class="sayhi">
+        <span class="sayhi__hand">👋</span>
+        <span>Say Hello</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. HERO SECTION — FACHRI ORBIT SYSTEM + PROMINENT NAME
+         ========================================================= -->
+    <section class="hero" id="home">
+      <!-- ORBITING PROJECT CARDS RING -->
+      <div class="orbit__ring" id="ring">
+        <a class="orbit__card" href="https://churnanalytics2-9hgp.vercel.app/" target="_blank" rel="noopener" aria-label="ChurnWatch Dashboard">
+          <img src="assets/churnwatch.png" alt="ChurnWatch Dashboard">
+        </a>
+        <a class="orbit__card" href="#gallery" aria-label="Vendoria Event Marketplace">
+          <img src="assets/vendoria.png" alt="Vendoria Marketplace">
+        </a>
+        <a class="orbit__card" href="https://lawby-ai.vercel.app/" target="_blank" rel="noopener" aria-label="Lawby AI Platform">
+          <img src="skillary.png" alt="Lawby AI">
+        </a>
+        <a class="orbit__card" href="https://digistry-com.vercel.app/" target="_blank" rel="noopener" aria-label="Digistry Marketplace">
+          <img src="digistry.png" alt="Digistry Marketplace">
+        </a>
+        <a class="orbit__card" href="https://takar-roan.vercel.app/" target="_blank" rel="noopener" aria-label="Takar Digital App">
+          <img src="hibiro.png" alt="Takar Digital App">
+        </a>
+        <a class="orbit__card" href="https://skillary.my.id/" target="_blank" rel="noopener" aria-label="Skillary.id Platform">
+          <img src="skillary.png" alt="Skillary Revamp">
+        </a>
+        <a class="orbit__card" href="https://churnanalytics2-9hgp.vercel.app/" target="_blank" rel="noopener" aria-label="Customer Churn Metrics">
+          <img src="assets/churnwatch.png" alt="Customer Churn Analytics">
+        </a>
+        <a class="orbit__card" href="#gallery" aria-label="Vendoria Categories">
+          <img src="assets/vendoria.png" alt="Vendoria Services">
+        </a>
+      </div>
+
+      <!-- Edge Vignette Fades -->
+      <span class="orbit__fade orbit__fade--l" aria-hidden="true"></span>
+      <span class="orbit__fade orbit__fade--r" aria-hidden="true"></span>
+      <span class="orbit__fade orbit__fade--b" aria-hidden="true"></span>
+
+      <!-- Central Hero Stage -->
+      <div class="hero__copy" id="orbitCopy">
+        <div class="hero__status-pill reveal">
+          <span>✨</span>
+          <span>Open to IT Project &amp; Analytics Opportunities</span>
+        </div>
+
+        <!-- 100% CLEAR, UNBLOCKED, GLORIOUS TYPOGRAPHY -->
+        <h1 class="hero__main-name reveal">Agatha Jeanetta</h1>
+
+        <h2 class="hero__subhead reveal">Business Analytics · Digital Business · Project Management</h2>
+        <p class="hero__institution reveal">B.S. in Information Systems · Universitas Brawijaya</p>
+
+        <!-- Floating Stats Pills (Subtle Bobbing Animation) -->
+        <div class="hero__pills-wrapper reveal">
+          <div class="stat-pill">
+            <span>🎓</span>
+            <span>GPA 3.70 / 4.00</span>
+          </div>
+          <div class="stat-pill">
+            <span>📊</span>
+            <span>Business Analyst</span>
+          </div>
+          <div class="stat-pill">
+            <span>📈</span>
+            <span>Data Analyst</span>
+          </div>
+          <div class="stat-pill">
+            <span>🚀</span>
+            <span>Product Management</span>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--burgundy">
+            <span>Explore Projects</span>
+            <svg class="i" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <a href="assets/Agatha_Jeanetta_CV.pdf" class="btn" download target="_blank">
+            <span>Download CV</span>
+            <svg class="i" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- Social Handles -->
+        <div class="hero__socials reveal">
+          <a href="https://www.linkedin.com/in/agatha-jeanetta/" target="_blank" rel="noopener">
+            <svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V16M8 7.6v.01M12 16v-5.5M12 13a2.5 2.5 0 0 1 5 0v3"/></svg>
+            <span>agatha-jeanetta</span>
+          </a>
+          <a href="https://www.instagram.com/jeanettaagatha/" target="_blank" rel="noopener">
+            <svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.01"/></svg>
+            <span>@jeanettaagatha</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. ABOUT ME SECTION (EDITORIAL 3-COLUMN)
+         ========================================================= -->
+    <section id="about">
+      <div class="wrap about__grid">
+        <!-- Column 1: A Bit About Me narrative -->
+        <div class="about__text reveal">
+          <p class="eyebrow">Meet me</p>
+          <h2 class="h2 about__title">A Bit About Me</h2>
+          <p class="about__desc">I work where business, data, and technology meet, with a growing interest in business analysis, data analytics, and product management. I enjoy moving between analytical thinking, understanding user needs, and exploring how digital solutions can address real-world challenges.</p>
+          <div class="about__cta">
+            <a class="btn--dark" href="#projects">Take a Closer Look <svg class="i" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a>
+            <a class="btn--link" href="assets/Agatha_Jeanetta_CV.pdf" download target="_blank">Me in docs <svg class="i" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Column 2: 1:1 Square Portrait Card -->
+        <figure class="portrait-card reveal" style="transition-delay: 0.1s">
+          <img src="assets/agatha_square.jpg" alt="Agatha Jeanetta Arimbi Putri">
+          <figcaption>
+            <span>Agatha Jeanetta</span>
+            <small>Business &amp; Systems Analyst</small>
+          </figcaption>
+        </figure>
+
+        <!-- Column 3: Contact / Get in Touch -->
+        <div class="about__contact reveal" style="transition-delay: 0.2s">
+          <p class="eyebrow">Contact</p>
+          <h2 class="h2 about__title">Get in Touch</h2>
+          <div class="contact-list">
+            <a class="contact-pill" href="mailto:agathajeanetta@gmail.com">
+              <span class="contact-pill__icon"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+              <span class="contact-pill__text">agathajeanetta@gmail.com</span>
+            </a>
+            <a class="contact-pill" href="https://www.linkedin.com/in/agatha-jeanetta/" target="_blank" rel="noopener">
+              <span class="contact-pill__icon"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V16M8 7.6v.01M12 16v-5.5M12 13a2.5 2.5 0 0 1 5 0v3"/></svg></span>
+              <span class="contact-pill__text">Agatha Jeanetta</span>
+            </a>
+            <a class="contact-pill" href="https://www.instagram.com/jeanettaagatha/" target="_blank" rel="noopener">
+              <span class="contact-pill__icon"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.01"/></svg></span>
+              <span class="contact-pill__text">@jeanettaagatha</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. "THE THINGS" — 3D PHYSICAL FOLDERS (FACHRI AK ICONIC)
+         ========================================================= -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Featured Deployments</p>
+          <h2 class="h2">The Things</h2>
+          <p class="lead">Interactive live digital systems and analytical platforms developed end-to-end.</p>
+        </div>
+
+        <div class="folders">
+          <!-- Folder 1: Customer Churn Analytics (Real ChurnWatch Screenshot) -->
+          <a class="folder-item reveal" href="https://churnanalytics2-9hgp.vercel.app/" target="_blank" rel="noopener">
+            <div class="folder">
+              <svg class="folder__back" viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M4,10 Q4,8 6,8 L31,8 Q33,8 34.5,9.5 L37,12 Q38,13 39.5,13 L94,13 Q96,13 96,15 L96,62 L4,62 Z"/></svg>
+              <span class="folder__photo p1"><img src="assets/churnwatch.png" alt="ChurnWatch Dashboard"></span>
+              <span class="folder__photo p4"><img src="purewave.png" alt="Data Flow"></span>
+              <span class="folder__photo p2"><img src="assets/churnwatch.png" alt="Insights"></span>
+              <span class="folder__photo p3"><img src="skillary.png" alt="Analytics"></span>
+              <span class="folder__front"><svg viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M0,16 Q0,14 2,14 L42,14 Q44,14 45.5,15.5 L50,20.5 Q51,22 53,22 L98,22 Q100,22 100,24 L100,68 Q100,70 98,70 L2,70 Q0,70 0,68 Z"/></svg></span>
+            </div>
+            <h3>Customer Churn Analytics</h3>
+            <p class="desc">SQL pipeline with an interactive FastAPI and Chart.js dashboard analyzing 10,000+ customer churn patterns.</p>
+            <span class="tag">BI &amp; Data Analytics</span>
+            <span class="folder-link">Open Live Dashboard ↗</span>
+          </a>
+
+          <!-- Folder 2: Vendoria (Real Vendoria Screenshot) -->
+          <a class="folder-item reveal" href="#gallery" style="transition-delay: 0.1s">
+            <div class="folder">
+              <svg class="folder__back" viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M4,10 Q4,8 6,8 L31,8 Q33,8 34.5,9.5 L37,12 Q38,13 39.5,13 L94,13 Q96,13 96,15 L96,62 L4,62 Z"/></svg>
+              <span class="folder__photo p1"><img src="assets/vendoria.png" alt="Vendoria 1"></span>
+              <span class="folder__photo p4"><img src="digistry.png" alt="Vendoria 2"></span>
+              <span class="folder__photo p2"><img src="assets/vendoria.png" alt="Vendoria 3"></span>
+              <span class="folder__photo p3"><img src="skillary.png" alt="Vendoria 4"></span>
+              <span class="folder__front"><svg viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M0,16 Q0,14 2,14 L42,14 Q44,14 45.5,15.5 L50,20.5 Q51,22 53,22 L98,22 Q100,22 100,24 L100,68 Q100,70 98,70 L2,70 Q0,70 0,68 Z"/></svg></span>
+            </div>
+            <h3>Vendoria Event Marketplace</h3>
+            <p class="desc">Event service marketplace prototype. Conducted user research, user flows, and prioritized MVP features via RICE.</p>
+            <span class="tag">Product &amp; Business Analysis</span>
+            <span class="folder-link">Explore Case Study ↗</span>
+          </a>
+
+          <!-- Folder 3: Lawby AI -->
+          <a class="folder-item reveal" href="https://lawby-ai.vercel.app/" target="_blank" rel="noopener" style="transition-delay: 0.15s">
+            <div class="folder">
+              <svg class="folder__back" viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M4,10 Q4,8 6,8 L31,8 Q33,8 34.5,9.5 L37,12 Q38,13 39.5,13 L94,13 Q96,13 96,15 L96,62 L4,62 Z"/></svg>
+              <span class="folder__photo p1"><img src="skillary.png" alt="Lawby 1"></span>
+              <span class="folder__photo p4"><img src="purewave.png" alt="Lawby 2"></span>
+              <span class="folder__photo p2"><img src="digistry.png" alt="Lawby 3"></span>
+              <span class="folder__photo p3"><img src="hibiro.png" alt="Lawby 4"></span>
+              <span class="folder__front"><svg viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M0,16 Q0,14 2,14 L42,14 Q44,14 45.5,15.5 L50,20.5 Q51,22 53,22 L98,22 Q100,22 100,24 L100,68 Q100,70 98,70 L2,70 Q0,70 0,68 Z"/></svg></span>
+            </div>
+            <h3>Lawby AI Platform</h3>
+            <p class="desc">AI-powered legal advisory platform providing intelligent case parsing and accessible public legal assistance.</p>
+            <span class="tag">Legal Tech · AI Platform</span>
+            <span class="folder-link">Open Live Platform ↗</span>
+          </a>
+
+          <!-- Folder 4: Takar Digital App -->
+          <a class="folder-item reveal" href="https://takar-roan.vercel.app/" target="_blank" rel="noopener" style="transition-delay: 0.2s">
+            <div class="folder">
+              <svg class="folder__back" viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M4,10 Q4,8 6,8 L31,8 Q33,8 34.5,9.5 L37,12 Q38,13 39.5,13 L94,13 Q96,13 96,15 L96,62 L4,62 Z"/></svg>
+              <span class="folder__photo p1"><img src="hibiro.png" alt="Takar 1"></span>
+              <span class="folder__photo p4"><img src="skillary.png" alt="Takar 2"></span>
+              <span class="folder__photo p2"><img src="purewave.png" alt="Takar 3"></span>
+              <span class="folder__photo p3"><img src="digistry.png" alt="Takar 4"></span>
+              <span class="folder__front"><svg viewBox="0 0 100 70" preserveAspectRatio="none"><path d="M0,16 Q0,14 2,14 L42,14 Q44,14 45.5,15.5 L50,20.5 Q51,22 53,22 L98,22 Q100,22 100,24 L100,68 Q100,70 98,70 L2,70 Q0,70 0,68 Z"/></svg></span>
+            </div>
+            <h3>Takar Digital App</h3>
+            <p class="desc">User-centric digital measurement and nutritional balance system architected for seamless daily health usage.</p>
+            <span class="tag">Digital Product · Health</span>
+            <span class="folder-link">Open Live Web App ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. "MY ARCHIVE CABINET" — TABBED FILE FOLDER
+         ========================================================= -->
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Categorized Index</p>
+          <h2 class="h2">My Archive Cabinet</h2>
+          <p class="lead">Documented projects, case studies, and engineering achievements across key disciplines.</p>
+        </div>
+
+        <div class="cabinet reveal">
+          <div class="cabinet__tabs" role="tablist">
+            <button class="ctab is-active" type="button" role="tab" id="tab-bi" aria-controls="panel-bi" aria-selected="true" style="--tab-bg:#f4f4f5; z-index:5">
+              <span>Business Intelligence &amp; Data</span>
+            </button>
+            <button class="ctab" type="button" role="tab" id="tab-systems" aria-controls="panel-systems" aria-selected="false" style="--tab-bg:#eaebee; z-index:4">
+              <span>Systems &amp; Full-Stack</span>
+            </button>
+            <button class="ctab" type="button" role="tab" id="tab-design" aria-controls="panel-design" aria-selected="false" style="--tab-bg:#e2e4e8; z-index:3">
+              <span>UI/UX &amp; Product Design</span>
+            </button>
+            <button class="ctab" type="button" role="tab" id="tab-cert" aria-controls="panel-cert" aria-selected="false" style="--tab-bg:#dadde2; z-index:2">
+              <span>Certificates &amp; Credentials</span>
+            </button>
+          </div>
+
+          <div class="cabinet__body">
+            <!-- PANEL 1: BI & DATA -->
+            <div class="cpanel is-active" role="tabpanel" id="panel-bi" aria-labelledby="tab-bi">
+              <div class="cpanel__top">
+                <div>
+                  <p class="eyebrow">Discipline 01</p>
+                  <h3 class="cpanel__title">Business Intelligence &amp; Analytics</h3>
+                </div>
+                <p class="cpanel__context">Extracting actionable signals from raw data. Transforming customer transactional logs into automated forecasting dashboards.</p>
+              </div>
+
+              <div class="cpanel__grid">
+                <div class="cpanel-card">
+                  <img src="assets/churnwatch.png" alt="Customer Churn" class="cpanel-card__img">
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Customer Churn Analytics (ChurnWatch)</h4>
+                    <p class="cpanel-card__desc">Analyzed customer data using SQL and Excel to identify churn patterns and built FastAPI &amp; Chart.js dashboard.</p>
+                    <a href="https://churnanalytics2-9hgp.vercel.app/" target="_blank" rel="noopener" class="cpanel-card__link">View Dashboard ↗</a>
+                  </div>
+                </div>
+
+                <div class="cpanel-card">
+                  <img src="assets/vendoria.png" alt="Vendoria Marketplace" class="cpanel-card__img">
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Vendoria — Digital Marketplace Prototype</h4>
+                    <p class="cpanel-card__desc">Analyzed vendor needs, translated requirements into features, and prioritized MVP backlog using RICE framework.</p>
+                    <span class="tag">RICE Framework · Product Analysis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 2: SYSTEMS & FULL-STACK -->
+            <div class="cpanel" role="tabpanel" id="panel-systems" aria-labelledby="tab-systems">
+              <div class="cpanel__top">
+                <div>
+                  <p class="eyebrow">Discipline 02</p>
+                  <h3 class="cpanel__title">Systems &amp; Full-Stack Development</h3>
+                </div>
+                <p class="cpanel__context">Building scalable, responsive web applications from database architecture to smooth frontend user interfaces.</p>
+              </div>
+
+              <div class="cpanel__grid">
+                <div class="cpanel-card">
+                  <img src="digistry.png" alt="Digistry Marketplace" class="cpanel-card__img">
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Digistry Digital Marketplace</h4>
+                    <p class="cpanel-card__desc">Engineered full-stack marketplace with 99+ products, catalog management, and responsive frontend.</p>
+                    <a href="https://digistry-com.vercel.app/" target="_blank" rel="noopener" class="cpanel-card__link">Visit Digistry ↗</a>
+                  </div>
+                </div>
+
+                <div class="cpanel-card">
+                  <img src="hibiro.png" alt="Hibiro Ramen" class="cpanel-card__img">
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Hibiro Ramen Digital Presence</h4>
+                    <p class="cpanel-card__desc">Developed modern restaurant web presence and digital menu to enhance customer discovery and ordering.</p>
+                    <a href="https://hibiroramen.my.id/" target="_blank" rel="noopener" class="cpanel-card__link">Visit Hibiro Ramen ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 3: UI/UX & PRODUCT DESIGN -->
+            <div class="cpanel" role="tabpanel" id="panel-design" aria-labelledby="tab-design">
+              <div class="cpanel__top">
+                <div>
+                  <p class="eyebrow">Discipline 03</p>
+                  <h3 class="cpanel__title">UI/UX &amp; Design Systems</h3>
+                </div>
+                <p class="cpanel__context">Crafting structured design systems, wireframes, and prototypes in Figma that reduce developer handoff friction by 20%.</p>
+              </div>
+
+              <div class="cpanel__grid">
+                <div class="cpanel-card">
+                  <img src="skillary.png" alt="Skillary Platform" class="cpanel-card__img">
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Skillary.id Learning Platform Revamp</h4>
+                    <p class="cpanel-card__desc">Redesigned 15+ pages in Figma, constructed design tokens and modular UI components for developer efficiency.</p>
+                    <a href="https://skillary.my.id/" target="_blank" rel="noopener" class="cpanel-card__link">Visit Skillary ↗</a>
+                  </div>
+                </div>
+
+                <div class="cpanel-card">
+                  <img src="purewave.png" alt="PureWave Clean Water" class="cpanel-card__img">
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">PureWave Clean Water Initiative</h4>
+                    <p class="cpanel-card__desc">Information platform designed for clean water accessibility and regional resource education across Indonesia.</p>
+                    <a href="https://purewave.fwh.is/?i=1" target="_blank" rel="noopener" class="cpanel-card__link">Visit PureWave ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 4: CERTIFICATES & CREDENTIALS -->
+            <div class="cpanel" role="tabpanel" id="panel-cert" aria-labelledby="tab-cert">
+              <div class="cpanel__top">
+                <div>
+                  <p class="eyebrow">Discipline 04</p>
+                  <h3 class="cpanel__title">Verified Certifications</h3>
+                </div>
+                <div class="cpanel__top-right">
+                  <p class="cpanel__context">Official industry certifications and competitive recognitions spanning Google AI, IBM SkillsBuild, UI/UX, and Campus Leadership.</p>
+                  <div class="cert-nav-controls">
+                    <button type="button" class="cert-nav-btn cert-nav-btn--prev" id="certPrevBtn" aria-label="Previous certificates" title="Previous">
+                      <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <span class="cert-counter" id="certCounter">1 / 8</span>
+                    <button type="button" class="cert-nav-btn cert-nav-btn--next" id="certNextBtn" aria-label="Next certificates" title="Next">
+                      <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cert-carousel-wrap">
+                <div class="cert-carousel" id="certCarousel">
+                <!-- 1. Google Student Ambassador -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_gsa.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_gsa.png" alt="Google Student Ambassador Class of 2026" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Google Student Ambassador 2026</h4>
+                    <p class="cpanel-card__desc">Certificate of Participation awarded by Google Gemini Southeast Asia for championing AI adoption; selected from 81,000 students nationwide.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <a href="assets/Google_Student_Ambassador_Certificate.pdf" target="_blank" class="cpanel-card__link">View PDF ↗</a>
+                      <a href="assets/sertif_gsa.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Project Management Fundamentals -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_ibm_pm.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_ibm_pm.png" alt="IBM Project Management Fundamentals" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Project Management Fundamentals</h4>
+                    <p class="cpanel-card__desc">Verified by IBM SkillsBuild covering scope planning, project life cycles, risk management, and Agile execution frameworks.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <a href="assets/IBM_Project_Management_Fundamentals.pdf" target="_blank" class="cpanel-card__link">View PDF ↗</a>
+                      <a href="https://www.credly.com/go/yslN3G3U" target="_blank" rel="noopener" class="cpanel-card__link" style="color: var(--muted);">Credly Verify ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Be an Entrepreneur -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_ibm_entrepreneur.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_ibm_entrepreneur.png" alt="IBM Be an Entrepreneur" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Be an Entrepreneur</h4>
+                    <p class="cpanel-card__desc">Verified by IBM SkillsBuild &amp; NFTE, recognizing entrepreneurial mindset, opportunity analysis, business modeling, and venture validation.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <a href="assets/IBM_Be_An_Entrepreneur.pdf" target="_blank" class="cpanel-card__link">View PDF ↗</a>
+                      <a href="https://www.credly.com/badges/cf207210-9dc4-46c3-b56f-063ff91ff78a" target="_blank" rel="noopener" class="cpanel-card__link" style="color: var(--muted);">Credly Verify ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. UI/UX Fundamentals GDGOC UB -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_gdgoc_uiux.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_gdgoc_uiux.png" alt="UI/UX Fundamentals GDGOC UB" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">UI/UX Fundamentals — GDGOC UB</h4>
+                    <p class="cpanel-card__desc">Certificate of Appreciation for active participation in Study Jam #ProductSeries: "Introducing UI/UX" held by Google Developer Groups On Campus Universitas Brawijaya.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <span class="tag">GDGOC UB · Nov 2024</span>
+                      <a href="assets/sertif_gdgoc_uiux.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 5. Business Case Competition HMM ITB 2025 -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_hmm_itb.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_hmm_itb.png" alt="Business Case Competition HMM ITB 2025" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Business Case Competition — HMM ITB</h4>
+                    <p class="cpanel-card__desc">Certificate of Appreciation as participant in M-Fest 2025 National Business Case Competition organized by HMM ITB in collaboration with ParagonCorp, Lestari, and myECO.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <span class="tag">HMM ITB &amp; ParagonCorp · May 2025</span>
+                      <a href="assets/sertif_hmm_itb.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. Supervisor Raja Brawijaya 2025 -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_raja_brawijaya.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_raja_brawijaya.png" alt="Supervisor Raja Brawijaya 2025" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Staf Supervisor (SPV) — RAJA Brawijaya 2025</h4>
+                    <p class="cpanel-card__desc">Official Certificate as Panitia Staf SPV for Jelajah Almamater Brawijaya (RAJA Brawijaya 2025) issued by Universitas Brawijaya &amp; Wakil Rektor Kemahasiswaan.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <span class="tag">Universitas Brawijaya · Aug 2025</span>
+                      <a href="assets/sertif_raja_brawijaya.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 7. Liaison Officer ProConnect 2026 StudentsxCEOs -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_sxc_lo.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_sxc_lo.png" alt="Liaison Officer ProConnect 2026 StudentsxCEOs" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Liaison Officer — ProConnect 2026</h4>
+                    <p class="cpanel-card__desc">Certificate of Committee as Officer of Liaison Officer in supporting and contributing to the success of ProConnect 2026 organized by StudentsxCEOs East Java.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <span class="tag">StudentsxCEOs East Java · 2026</span>
+                      <a href="assets/sertif_sxc_lo.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 8. Divisi Acara IT FEST 2025 -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_itfest.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_itfest.png" alt="Divisi Acara IT FEST 2025 KBMDSI FILKOM UB" class="cpanel-card__img">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Divisi Acara — IT FEST 2025</h4>
+                    <p class="cpanel-card__desc">Sertifikat Penghargaan sebagai Panitia Divisi Acara pada IT FEST 2025 "Design The Future, Break The Limits" oleh KBMDSI Fakultas Ilmu Komputer Universitas Brawijaya.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <span class="tag">KBMDSI FILKOM UB · Aug 2025</span>
+                      <a href="assets/sertif_itfest.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 9. Staf Ahli Kementerian Luar Negeri EM UB 2025 -->
+                <div class="cpanel-card">
+                  <a href="assets/sertif_em_ub.png" target="_blank" class="cpanel-card__media" title="Click to view full certificate">
+                    <img src="assets/sertif_em_ub.png" alt="Staf Ahli Kementerian Luar Negeri EM UB 2025" class="cpanel-card__img" style="object-position: top center;">
+                  </a>
+                  <div class="cpanel-card__body">
+                    <h4 class="cpanel-card__title">Staf Ahli Kemlu — Eksekutif Mahasiswa (EM) UB</h4>
+                    <p class="cpanel-card__desc">Piagam Penghargaan resmi dari Rektor Universitas Brawijaya atas dedikasi dan pengabdian sebagai Staf Ahli Kementerian Luar Negeri EM UB Tahun 2025.</p>
+                    <div style="display: flex; gap: 14px; align-items: center; margin-top: 8px;">
+                      <span class="tag">Rektorat UB · Dec 2025</span>
+                      <a href="assets/sertif_em_ub.png" target="_blank" class="cpanel-card__link" style="color: var(--muted);">View Image ↗</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. "JOURNEY" — EXPERIENCE (DARK HALFTONE ANIMATED)
+         ========================================================= -->
+    <section id="journey">
+      <div class="wrap">
+        <div class="journey__head reveal">
+          <div>
+            <p class="eyebrow">Career Timeline</p>
+            <h2 class="h2">My Professional Journey</h2>
+            <p class="lead">From tech startups to student government and national initiatives.</p>
+          </div>
+          <a href="assets/Agatha_Jeanetta_CV.pdf" class="btn btn--burgundy" download target="_blank">
+            <span>Download Official CV (PDF)</span>
+            <svg class="i" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+
+        <ol class="exp-table reveal">
+          <li class="exp-row">
+            <span class="exp-logo">CA</span>
+            <div>
+              <p class="exp-co">Customer Churn Analytics</p>
+              <p class="exp-date">January – April 2026</p>
+            </div>
+            <p class="exp-role">Business Intelligence &amp; Data Analytics Lead</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">FastAPI</span>
+              <span class="exp-tag">SQL</span>
+              <span class="exp-tag">Chart.js</span>
+            </div>
+          </li>
+
+          <li class="exp-row">
+            <span class="exp-logo">VD</span>
+            <div>
+              <p class="exp-co">Vendoria Prototype</p>
+              <p class="exp-date">October 2026</p>
+            </div>
+            <p class="exp-role">Product &amp; Business Analysis Contributor</p>
+            <div class="exp-tags">
+              <span class="exp-tag">RICE Framework</span>
+              <span class="exp-tag">Requirements Analysis</span>
+              <span class="exp-tag">MVP Scoping</span>
+            </div>
+          </li>
+
+          <li class="exp-row">
+            <span class="exp-logo">DG</span>
+            <div>
+              <p class="exp-co">Digistry Digital Marketplace</p>
+              <p class="exp-date">February – August 2025</p>
+            </div>
+            <p class="exp-role">Full-Stack Web Developer</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Next.js</span>
+              <span class="exp-tag">React.js</span>
+              <span class="exp-tag">PHP</span>
+              <span class="exp-tag">MySQL</span>
+            </div>
+          </li>
+
+          <li class="exp-row">
+            <span class="exp-logo">SK</span>
+            <div>
+              <p class="exp-co">Skillary.id</p>
+              <p class="exp-date">March 2025</p>
+            </div>
+            <p class="exp-role">UI/UX Design Intern</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Figma</span>
+              <span class="exp-tag">Design Systems</span>
+              <span class="exp-tag">User Flow</span>
+            </div>
+          </li>
+
+          <li class="exp-row">
+            <span class="exp-logo">EM</span>
+            <div>
+              <p class="exp-co">Kementerian Luar Negeri, EM UB</p>
+              <p class="exp-date">March – December 2025</p>
+            </div>
+            <p class="exp-role">Expert Staff (Staf Ahli)</p>
+            <div class="exp-tags">
+              <span class="exp-tag">External Stakeholders</span>
+              <span class="exp-tag">Strategic Communications</span>
+            </div>
+          </li>
+
+          <li class="exp-row">
+            <span class="exp-logo">BM</span>
+            <div>
+              <p class="exp-co">Brawijaya Muda 2025</p>
+              <p class="exp-date">May – September 2025</p>
+            </div>
+            <p class="exp-role">Deputy Head of Competition Division</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Competition Operations</span>
+              <span class="exp-tag">Team Leadership</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. "ACHIEVEMENTS BOARD" — STICKY POST-IT NOTES
+         ========================================================= -->
+    <section id="awards">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Recognitions &amp; Honors</p>
+          <h2 class="h2">Pinned Milestones</h2>
+          <p class="lead">Competitive achievements, national fellowships, and academic performance.</p>
+        </div>
+
+        <div class="board reveal">
+          <article class="note">
+            <span class="pin"></span>
+            <p class="note__tag">Google AI Leadership</p>
+            <h3 class="note__title">Google Student Ambassador 2026</h3>
+            <p class="note__desc">Selected from a nationwide pool of <mark>81,000 students</mark> across Indonesia for exceptional leadership in championing Google AI adoption within the campus community.</p>
+            <div class="note__footer">
+              <span>Google Gemini SEA</span>
+              <span>Apr – Aug 2026</span>
+            </div>
+          </article>
+
+          <article class="note">
+            <span class="pin"></span>
+            <p class="note__tag">Global Exchange</p>
+            <h3 class="note__title">Gateway UB Scholarship (Vietnam)</h3>
+            <p class="note__desc">Awarded prestigious fully-funded student exchange fellowship to Vietnam, selected as <mark>1 of 39 participants</mark> from over 200+ competitive university applicants.</p>
+            <div class="note__footer">
+              <span>Universitas Brawijaya</span>
+              <span>Dec 2025</span>
+            </div>
+          </article>
+
+          <article class="note">
+            <span class="pin"></span>
+            <p class="note__tag">Business Competition</p>
+            <h3 class="note__title">Top 10 Finalist — Rise &amp; Funs</h3>
+            <p class="note__desc">Recognized among the <mark>Top 10 Finalists</mark> in the National Business Plan Competition 2026 for digital product viability and financial modeling.</p>
+            <div class="note__footer">
+              <span>National Competition</span>
+              <span>Oct 2026</span>
+            </div>
+          </article>
+
+          <article class="note">
+            <span class="pin"></span>
+            <p class="note__tag">Entrepreneurship</p>
+            <h3 class="note__title">Top 10 Finalist — HIPMI Business Plan</h3>
+            <p class="note__desc">Awarded <mark>Top 10 Finalist</mark> in the HIPMI Business Plan Competition for market validation, unit economics, and scalable digital strategy.</p>
+            <div class="note__footer">
+              <span>HIPMI Indonesia</span>
+              <span>Oct 2026</span>
+            </div>
+          </article>
+
+          <article class="note">
+            <span class="pin"></span>
+            <p class="note__tag">International Challenge</p>
+            <h3 class="note__title">The Best of Chemistry Team</h3>
+            <p class="note__desc">Honored at the <mark>International SMART Accounting &amp; Business Challenge (SABC)</mark> 2026 for cross-functional problem-solving and team synergy.</p>
+            <div class="note__footer">
+              <span>SABC International</span>
+              <span>Nov 2026</span>
+            </div>
+          </article>
+
+          <article class="note">
+            <span class="pin"></span>
+            <p class="note__tag">Academic Standing</p>
+            <h3 class="note__title">Cumulative GPA 3.70 / 4.00</h3>
+            <p class="note__desc">Maintaining high academic distinction in S1 Sistem Informasi FILKOM UB across database administration, systems architecture, and business intelligence.</p>
+            <div class="note__footer">
+              <span>FILKOM UB</span>
+              <span>2024 – Present</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. SKILLS BENTO GRID
+         ========================================================= -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Tooling &amp; Expertise</p>
+          <h2 class="h2">Technical Competencies</h2>
+          <p class="lead">Synthesizing data science, business architecture, and technical execution.</p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <div class="skill-card__icon">📊</div>
+              <h3 class="skill-card__title">Business &amp; Analytics</h3>
+            </div>
+            <div class="skill-card__items">
+              <span class="skill-pill">Data Analysis</span>
+              <span class="skill-pill">Business Intelligence</span>
+              <span class="skill-pill">Business Process Modeling</span>
+              <span class="skill-pill">KPI Reporting</span>
+              <span class="skill-pill">RICE Prioritization</span>
+              <span class="skill-pill">Enterprise Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <div class="skill-card__icon">📈</div>
+              <h3 class="skill-card__title">Data &amp; Visualization Tools</h3>
+            </div>
+            <div class="skill-card__items">
+              <span class="skill-pill">SQL &amp; MySQL</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">FastAPI</span>
+              <span class="skill-pill">Chart.js</span>
+              <span class="skill-pill">Power BI</span>
+              <span class="skill-pill">Tableau</span>
+              <span class="skill-pill">Microsoft Excel (Advanced)</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <div class="skill-card__icon">🚀</div>
+              <h3 class="skill-card__title">Project &amp; Product Management</h3>
+            </div>
+            <div class="skill-card__items">
+              <span class="skill-pill">Project Coordination</span>
+              <span class="skill-pill">Requirements Analysis</span>
+              <span class="skill-pill">MVP Scoping</span>
+              <span class="skill-pill">IT Governance</span>
+              <span class="skill-pill">Process Improvement</span>
+              <span class="skill-pill">Technical Documentation</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <div class="skill-card__icon">💻</div>
+              <h3 class="skill-card__title">Engineering &amp; Design</h3>
+            </div>
+            <div class="skill-card__items">
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">PHP &amp; Laravel</span>
+              <span class="skill-pill">HTML5 &amp; CSS3</span>
+              <span class="skill-pill">RESTful APIs</span>
+              <span class="skill-pill">Figma (Design Systems)</span>
+              <span class="skill-pill">Git &amp; GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. RUNNING MARQUEE LOGOS
+         ========================================================= -->
+    <div class="marquee-section">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__item">Universitas Brawijaya <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Google Gemini AI <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Gateway UB Exchange <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Eksekutif Mahasiswa UB <span class="marquee__dot"></span></span>
+          <span class="marquee__item">IBM SkillsBuild <span class="marquee__dot"></span></span>
+          <span class="marquee__item">HIPMI Indonesia <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Allman Indonesia <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Skillary.id <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Digistry Digital <span class="marquee__dot"></span></span>
+          <span class="marquee__item">SABC International <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Universitas Brawijaya <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Google Gemini AI <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Gateway UB Exchange <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Eksekutif Mahasiswa UB <span class="marquee__dot"></span></span>
+          <span class="marquee__item">IBM SkillsBuild <span class="marquee__dot"></span></span>
+          <span class="marquee__item">HIPMI Indonesia <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Allman Indonesia <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Skillary.id <span class="marquee__dot"></span></span>
+          <span class="marquee__item">Digistry Digital <span class="marquee__dot"></span></span>
+          <span class="marquee__item">SABC International <span class="marquee__dot"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         10. CALL TO ACTION & CONTACT
+         ========================================================= -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta-card reveal">
+          <p class="eyebrow">Let's Collaborate</p>
+          <h2 class="h2">Got a Vision? Let's Build Something Impactful.</h2>
+          <p class="copy">I welcome opportunities in Business Analysis, Product Management, Data Analytics, and Systems Engineering. Let's start the conversation.</p>
+          <div class="cta-buttons">
+            <a href="mailto:agathajeanetta@gmail.com" class="btn btn--burgundy">
+              <span>Send an Email</span>
+              <svg class="i" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://wa.me/628883662930" target="_blank" class="btn">
+              <span>WhatsApp Chat</span>
+              <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/agatha-jeanetta/" target="_blank" class="btn">
+              <span>Connect on LinkedIn</span>
+              <svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       11. FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <strong>Agatha Jeanetta Arimbi Putri</strong> — Business Analytics · Digital Business · Project Management
+        </div>
+        <div class="footer__socials">
+          <a href="https://www.linkedin.com/in/agatha-jeanetta/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/jeanettaagatha/" target="_blank">Instagram</a>
+          <a href="mailto:agathajeanetta@gmail.com">Email</a>
+        </div>
+        <div>
+          <span>&copy; <span id="year">2026</span> All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       12. SCRIPTS (LENIS + FACHRI ORBIT PHYSICS + TABS)
+       ========================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script>
+    // 1. Lenis Smooth Scrolling Engine
+    try {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    } catch (e) {
+      console.log('Lenis bypass:', e);
+    }
+
+    // 2. Dynamic Island Navbar Scroll State
+    const topnav = document.getElementById('topnav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        topnav.classList.add('compact');
+      } else {
+        topnav.classList.remove('compact');
+      }
+    }, { passive: true });
+
+    // 3. FACHRI AK ORBIT ENGINE (Physics Simulation around Agatha's Name)
+    (function () {
+      const hero = document.getElementById('home');
+      const ring = document.getElementById('ring');
+      const copy = document.getElementById('orbitCopy');
+      if (!ring || !hero || !copy) return;
+
+      const cards = Array.from(ring.children);
+      const N = cards.length;
+      let cx, cy, R, Ry, cs;
+      let drift = 0;
+      let last = performance.now();
+      let visible = true;
+      let cur = window.scrollY;
+
+      function layout() {
+        const W = hero.clientWidth;
+        cs = W < 640 ? 110 : W < 1000 ? 135 : 155;
+        cx = W / 2;
+        cy = copy.offsetTop + copy.offsetHeight / 2;
+        R = W < 640 ? Math.max(220, W * 0.62) : Math.min(580, Math.max(380, W * 0.44));
+        Ry = Math.max(200, Math.min(R, cy - 80 + cs * 0.25));
+        ring.style.setProperty('--cs', cs + 'px');
+      }
+
+      function frame(now) {
+        const dt = Math.min(64, now - last);
+        last = now;
+        drift += dt * 0.0032; // Gentle idle orbiting
+        cur += (window.scrollY - cur) * 0.12; // Eased scroll response
+        const base = (cur * 0.16) + drift;
+        const ch = cs * 10 / 16;
+
+        for (let i = 0; i < N; i++) {
+          const th = ((base + i * 360 / N) % 360 + 540) % 360 - 180;
+          const r = th * Math.PI / 180;
+          const x = cx + R * Math.sin(r) - cs / 2;
+          const y = cy - Ry * Math.cos(r) - ch / 2;
+          const op = Math.max(0, Math.min(1, (160 - Math.abs(th)) / 40));
+          cards[i].style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0) rotate(${(th * 0.26).toFixed(2)}deg)`;
+          cards[i].style.opacity = op.toFixed(2);
+          cards[i].style.visibility = op < 0.02 ? 'hidden' : 'visible';
+        }
+
+        if (visible) requestAnimationFrame(frame);
+      }
+
+      layout();
+      window.addEventListener('resize', layout);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+
+      const obs = new IntersectionObserver((es) => {
+        const was = visible;
+        visible = es[0].isIntersecting;
+        if (visible && !was) {
+          last = performance.now();
+          requestAnimationFrame(frame);
+        }
+      });
+      obs.observe(hero);
+      requestAnimationFrame(frame);
+    })();
+
+    // 4. Scroll Reveal Engine
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    // 5. Archive Cabinet Tabs Switcher
+    let updateCertState;
+    const tabs = document.querySelectorAll('.ctab');
+    const panels = document.querySelectorAll('.cpanel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('aria-controls');
+
+        tabs.forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach(p => p.classList.remove('is-active'));
+
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        const activePanel = document.getElementById(targetId);
+        if (activePanel) {
+          activePanel.classList.add('is-active');
+          if (targetId === 'panel-cert' && typeof updateCertState === 'function') {
+            setTimeout(updateCertState, 80);
+          }
+        }
+      });
+    });
+
+    // 6. Active Nav Spy on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-pill a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 180) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current || (current === 'home' && link.getAttribute('href') === '#top')) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+
+    // 6.5. Certificates Carousel Slider Logic
+    const certCarousel = document.getElementById('certCarousel');
+    const certPrevBtn = document.getElementById('certPrevBtn');
+    const certNextBtn = document.getElementById('certNextBtn');
+    const certCounter = document.getElementById('certCounter');
+
+    if (certCarousel && certPrevBtn && certNextBtn) {
+      const getScrollStep = () => {
+        const card = certCarousel.querySelector('.cpanel-card');
+        return card ? card.offsetWidth + 24 : 420;
+      };
+
+      updateCertState = () => {
+        const totalCards = certCarousel.querySelectorAll('.cpanel-card').length;
+        const cardWidth = getScrollStep();
+        const currentIdx = Math.round(certCarousel.scrollLeft / cardWidth);
+        const maxScroll = certCarousel.scrollWidth - certCarousel.clientWidth;
+
+        certPrevBtn.disabled = certCarousel.scrollLeft <= 10;
+        certNextBtn.disabled = certCarousel.scrollLeft >= maxScroll - 10;
+
+        if (certCounter) {
+          const cardsPerView = window.innerWidth <= 768 ? 1 : 2;
+          const totalPages = Math.max(1, totalCards - cardsPerView + 1);
+          const currentPage = Math.min(Math.max(currentIdx + 1, 1), totalPages);
+          certCounter.textContent = `${currentPage} / ${totalPages}`;
+        }
+      };
+
+      certPrevBtn.addEventListener('click', () => {
+        certCarousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      });
+
+      certNextBtn.addEventListener('click', () => {
+        certCarousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      });
+
+      certCarousel.addEventListener('scroll', updateCertState, { passive: true });
+      window.addEventListener('resize', updateCertState);
+      setTimeout(updateCertState, 200);
+    }
+
+    // 7. Dynamic Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
